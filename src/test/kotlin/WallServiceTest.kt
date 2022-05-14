@@ -17,7 +17,7 @@ internal class WallServiceTest {
 
     @Test
     fun add() {
-        val expectedID = 2
+        val expectedID = 1
         val actualID = WallService.add(Post(id = 12345,
             ownerId = 5674734,
             fromId = 9999999,

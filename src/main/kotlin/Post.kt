@@ -1,7 +1,7 @@
 import ObjectField.*
 
 data class Post(
-    var propertyId : Int? = null,
+    var propertyId: Int? = null,
     val id: Int,
     var ownerId: Int,
     val fromId: Int,
@@ -24,8 +24,10 @@ data class Post(
     var isPinned: Boolean = false,
     var isFavorite: Boolean = true,
     var donut: Donut? = null,
-    val postponedId: Int = 23
-
+    val postponedId: Int = 23,
+    val attachments: Array<Attachment> = arrayOf(Video("Big floppa","Big floppa eat chicken"))
 )
+
+
 
 
