@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Homework4</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Main.kt</span></div><h1>Main.kt</h1><pre class="source lang-java linenums">fun main() {
+<span class="nc" id="L2">     var post1 =Post(id=12345,</span>
+<span class="nc" id="L3">         ownerId = 5674734,</span>
+<span class="nc" id="L4">         fromId = 9999999,</span>
+<span class="nc" id="L5">         createdBy = 889850938,</span>
+<span class="nc" id="L6">         date = 1212022,</span>
+<span class="nc" id="L7">         text = &quot;Hello, World!!&quot;,</span>
+<span class="nc" id="L8">         replyOwnerId = 567890,</span>
+<span class="nc" id="L9">         replyPostId = 124567,</span>
+<span class="nc" id="L10">         singerId = 77777)</span>
+<span class="nc" id="L11">    var post2 = Post(id=123456,</span>
+<span class="nc" id="L12">        ownerId = 567264734,</span>
+<span class="nc" id="L13">        fromId = 99999299,</span>
+<span class="nc" id="L14">        createdBy = 77850938,</span>
+<span class="nc" id="L15">        date = 1212022,</span>
+<span class="nc" id="L16">        text = &quot;Hello, World!!&quot;,</span>
+<span class="nc" id="L17">        replyOwnerId = 5617890,</span>
+<span class="nc" id="L18">        replyPostId = 12456567,</span>
+<span class="nc" id="L19">        singerId = 7777788)</span>
+
+<span class="nc" id="L21">    WallService.add(post1)</span>
+<span class="nc" id="L22">    WallService.add(post2)</span>
+
+<span class="nc" id="L24">    println( WallService.update(post2))</span>
+
+
+
+<span class="nc" id="L28">}</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
