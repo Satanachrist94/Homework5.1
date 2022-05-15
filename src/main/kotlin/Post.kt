@@ -25,7 +25,7 @@ data class Post(
     var isFavorite: Boolean = true,
     var donut: Donut? = null,
     val postponedId: Int = 23,
-    val attachments: Array<Attachment> = arrayOf(Video("Big floppa","Big floppa eat chicken"))
+    val attachments: Array<Attachment> = arrayOf(VideoAttachment())
 )
 
 

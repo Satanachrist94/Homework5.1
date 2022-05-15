@@ -23,17 +23,14 @@ fun main() {
     WallService.add(post1)
     WallService.add(post2)
 
-    println(WallService.update(post2))
-    for (attachment in post1.attachments) {
-        when (attachment.type) {
-            "photo" -> (attachment as Photo).album_id
-            "audio" -> (attachment as Audio).artist
-            "sticker" -> (attachment as Sticker).sticker_id
-            "history" -> (attachment as History).owner_id
-            "video" -> (attachment as Video).description
+    /*  println(WallService.update(post2))
 
-        }
-    }
+      println(post1.attachments[0])
+      for (attachments in post1.attachments) {
+          if (attachments is VideoAttachment) {
+              println(attachments.video)
+          }
+      }*/
 
 
 }
