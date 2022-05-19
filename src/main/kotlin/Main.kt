@@ -22,6 +22,8 @@ fun main() {
 
     WallService.add(post1)
     WallService.add(post2)
+    WallService.creatComment(Comments(3))
+   // println()
 
     /*  println(WallService.update(post2))
 
