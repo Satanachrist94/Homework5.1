@@ -1,6 +1,10 @@
+import Exeptions.PostNotFoundExeption
+import ObjectField.Comments
+
 object WallService {
     private var propertyId: Int = 0
     private var posts = mutableMapOf<Int, Post>()
+    private var comments = mutableListOf<Comments>()
 
 
     fun add(post: Post): Post {
@@ -8,6 +12,14 @@ object WallService {
         val c = post.copy(propertyId = propertyId)
         posts.put(propertyId, c)
         return c
+    }
+    fun creatComment(comment: Comments) {
+        if(posts.keys.contains(comment.id)) {
+            comments.add(comment)
+        }else
+            throw PostNotFoundExeption("Пост с таким id не существует. ")
+
+
     }
 
 
