@@ -1,16 +1,26 @@
-import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import Exeptions.PostNotFoundExeption
+import ObjectField.Comments
+import org.junit.After
+import org.junit.Before
 
-import org.junit.jupiter.api.Assertions.*
+
+import org.junit.Test
+import org.w3c.dom.Comment
+
+
+import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
+
 
 internal class WallServiceTest {
 
-    @BeforeEach
+    @Before
     fun setUp() {
     }
 
-    @AfterEach
+
+    @After
     fun tearDown() {
         WallService.clear()
     }
@@ -44,6 +54,7 @@ internal class WallServiceTest {
             replyPostId = 124567,
             singerId = 77777)))
         assertTrue(actualResult)
+
     }
 
     @Test
@@ -61,7 +72,35 @@ internal class WallServiceTest {
         post.propertyId = 56
         var actualResult = WallService.update(post)
         assertFalse(actualResult)
+
     }
 
+    @Test(expected = PostNotFoundExeption::class)
+    fun creatCommentsFalse() {
 
+        WallService.creatComment(comment = Comments(3))
+
+    }
+
+    @Test(expected = PostNotFoundExeption::class)
+    fun creatCommentsTrue() {
+        val expected = 1
+
+        var actual = WallService.creatComment(comment = Comments(1))
+        assertEquals(expected, actual.id)
+
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+

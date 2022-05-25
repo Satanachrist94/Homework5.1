@@ -22,11 +22,11 @@ fun main() {
 
     WallService.add(post1)
     WallService.add(post2)
-    WallService.creatComment(Comments(3))
-   // println()
+    WallService.creatComment(Comments(1))
+    // println()
 
-    /*  println(WallService.update(post2))
-
+    // println(WallService.update(post2))
+/*
       println(post1.attachments[0])
       for (attachments in post1.attachments) {
           if (attachments is VideoAttachment) {

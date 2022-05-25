@@ -7,18 +7,19 @@ object WallService {
     private var comments = mutableListOf<Comments>()
 
 
+
     fun add(post: Post): Post {
         propertyId++
         val c = post.copy(propertyId = propertyId)
         posts.put(propertyId, c)
         return c
     }
-    fun creatComment(comment: Comments) {
+    fun creatComment(comment: Comments)  :Comments{
         if(posts.keys.contains(comment.id)) {
             comments.add(comment)
+            return  comment
         }else
             throw PostNotFoundExeption("Пост с таким id не существует. ")
-
 
     }
 
